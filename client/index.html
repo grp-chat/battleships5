@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faster+One&family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Stacking Battleships Local Area Network</title>
+</head>
+
+<body>
+
+    <div class="buffer"></div>
+    
+    <div id="chat" class="chat">
+    </div>
+
+    <!-- <div id="maps" class="maps">
+        <div id="redTeamMap"></div>
+        <div id="blueTeamMap"></div>
+    </div> -->
+
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="title" id="modal-title">Modal title</div>
+            <button class="close-button" id="close-modal-button">&times;</button>
+        </div>
+
+        <div class="modal-body" id="modal-body">
+            
+        </div>
+    </div>
+
+    <div id="overlay"></div>
+    <!-- <iframe src="https://drive.google.com/file/d/172IxUTsaSUcUdLpZx-YiwzELj3Y5jB37/preview" width="640" height="480"></iframe> -->
+
+
+    <!-- <iframe width="560" height="315" src="https://drive.google.com/file/d/1iFgTNGjZqElB5vY8Ji-eB0PZOHu8m_eT/preview?autoplay=1" frameborder="0" allowfullscreen></iframe> -->
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+    <div class="video">
+        <!-- <video class="video" type="video/mp4" width="320" height="240">
+            <source src="https://drive.google.com/file/d/1kL-6P-VordZC9O8upAx9hW_yPbXe9_BY" type='video/mp4'>
+            Your browser does not support the video tag.
+         </video>  -->
+        <!-- <video width="640" height="320" type="video/mp4" class="clip1"></video> -->
+        <!-- miss -->
+        <!-- <video width="960" height="480" type="video/mp4" class="clip1">
+            <source src="https://drive.google.com/uc?export=download&id=1iFgTNGjZqElB5vY8Ji-eB0PZOHu8m_eT" type='video/mp4'>
+            <source src="https://drive.google.com/uc?id=1iFgTNGjZqElB5vY8Ji-eB0PZOHu8m_eT" type='video/mp4'>
+            <source src="https://drive.google.com/file/d/1iFgTNGjZqElB5vY8Ji-eB0PZOHu8m_eT/view" type='video/mp4'>
+            Your browser does not support the video tag.
+        </video> -->
+        <!-- <video width="640" height="320" src="https://drive.google.com/file/d/1iFgTNGjZqElB5vY8Ji-eB0PZOHu8m_eT/view?usp=sharing" type="video/mp4" class="clip1"></video> -->
+        
+        <!-- <video width="1280" height="640" src="clip1.mp4" type="video/mp4" class="clip1"></video> -->
+        
+        <!-- <iframe src="https://drive.google.com/file/d/1iFgTNGjZqElB5vY8Ji-eB0PZOHu8m_eT/preview" width="640" height="480" allow="autoplay"></iframe> -->
+         <!-- <iframe id="myFrame" width="640" height="360" src="https://drive.google.com/file/d/1iFgTNGjZqElB5vY8Ji-eB0PZOHu8m_eT/view?usp=sharing" allow="autoplay"></iframe> -->
+         <!-- <iframe id="myFrame" width="560" height="315" src="https://www.youtube.com/embed/NUCuHNdy9r0?enablejsapi=1&autoplay=1&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>          -->
+    </div>
+    <div class="video2">
+        <video width="640" height="320" type="video/mp4" class="clip2">
+            <!-- <source src="https://drive.google.com/uc?export=download&id=1HiB6sgspap8lniCqNUkzecD3LaAA_8HF" type='video/mp4'> -->
+            <!-- <source src="https://lh3.google.com/u/0/d/1HiB6sgspap8lniCqNUkzecD3LaAA_8HF" type='video/mp4'> -->
+        </video>
+        <!-- <video width="640" height="320" src="clip2.mp4" type="video/mp4" class="clip2"></video> -->
+        <!-- <video width="1280" height="640" src="clip2.mp4" type="video/mp4" class="clip2"></video> -->
+
+    </div>
+    <div class="video3">
+        <!-- <video width="960" height="480" type="video/mp4" class="clip3"> -->
+            <!-- <source src="https://drive.google.com/uc?export=download&id=14ZtRFG4mi15UgJ97-LAzIiFTgHZc1A6q" type='video/mp4'> -->
+            <!-- <source src="https://lh3.google.com/u/0/d/14ZtRFG4mi15UgJ97-LAzIiFTgHZc1A6q" type='video/mp4'> -->
+        </video>
+        <!-- <video width="640" height="320" src="clip2.mp4" type="video/mp4" class="clip2"></video> -->
+        <!-- <video width="1280" height="640" src="clip3.mp4" type="video/mp4" class="clip3"></video> -->
+
+    </div>
+
+    
+
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- <script src="/js/GridSystemClient.js"></script> -->
+    <!-- <script src="/js/ChatObject.js"></script> -->
+    <!-- <script src="/js/Missions.js"></script> -->
+    <script src="/js/index.js"></script>
+    <script src="/js/commands.js"></script>
+    
+    
+    
+    
+</body>
+
+</html>
