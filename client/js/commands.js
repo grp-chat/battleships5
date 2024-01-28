@@ -263,6 +263,7 @@ const allCommands = [
     new fixedCommand("TCR: result", 'updateTargetMap'),
     new fixedCommand("TCR: launch missile", 'launch'),
     new fixedCommand("TCR: set to game start", 'setGameStart'),
+    
     new fixedCommand("TCR: fix BG", 'fixBG'),
     new fixedCommand("TCR: restore data", 'restoreData'),
     new fixedCommand("TCR: reveal all ships", 'revealAll'),
@@ -276,6 +277,7 @@ const allCommands = [
     new fixedCommand("TCR: go next level", 'goToNextMap'),
     new fixedCommand("TCR: restart level", 'restartLevel'),
     new numCommand("TCR: get air drop team ", 'displayAirDrop'),
+    
     // new numCommand("TCR: display mission ", 'displayMission'),
     // new numCommand("TCR: open lock ", 'openLock'),
     // new numCommand("TCR: all +", 'addStepsAll'),

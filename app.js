@@ -417,6 +417,7 @@ io.sockets.on('connection', function (sock) {
     sock.on('setGameStart', () => {
         mainSystem.gameStarted = true;
         io.emit('chat-to-clients', `Game start: ${mainSystem.gameStarted}`);
+        io.emit('chat-to-clients', `START!!!`);
     });
     sock.on('restoreData', () => {
         fs.readFile('history.txt', function(err, data) {

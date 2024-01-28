@@ -754,7 +754,8 @@ sock.on('pushLocationsToTCR', data => {
         //console.log("Hit")
     } else {
         // gDrv2 = "https://drive.google.com/file/d/15KRceSBG9Z-uTgGvDym33TsKoBlIJ1TO/view?usp=sharing"
-        gDrv2 = "https://drive.google.com/file/d/1iFgTNGjZqElB5vY8Ji-eB0PZOHu8m_eT/view?usp=sharing"
+        // gDrv2 = "https://drive.google.com/file/d/1iFgTNGjZqElB5vY8Ji-eB0PZOHu8m_eT/view?usp=sharing"
+        gDrv2 = "https://drive.google.com/file/d/1ruywp3Hkr7l_XjPKKS_4llQlRc3HFRhM/view?usp=sharing"
         window.open(gDrv2, "_blank");
 
         const videoDiv = document.querySelector('.video');
