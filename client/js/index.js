@@ -415,7 +415,7 @@ function secretModeFunction(playersArr, swapMode) {
 function offSecretMode(mainSystem) {
     
     secretMode = false;
-    document.body.style.backgroundImage = "url('https://naval-encyclopedia.com/wp-content/uploads/2019/07/wow-lepanto.jpg')"
+    document.body.style.backgroundImage = "url('https://lh3.googleusercontent.com/pw/AP1GczPdivmQ54fYNV7yvRRBHhZw2IONtHLmMIk10ANIGvDFfUU45j44_hk-KykTBSVdux4FD5rrAztSnGODVyD8npkkoR3F1XpNOX_nG9ztj4MY5B58Nx4=w2400')"
     if (lastClicked) lastClicked.className = '';
 
     grid.style.display = "inline";
@@ -792,11 +792,16 @@ sock.on('pushLocationsToTCR', data => {
 
 });
 sock.on('displayAirDrop', data => {
-    const gDrv1 = "https://drive.google.com/file/d/1xc4upf6KheKfludPmsZlC8oFEHOgO1lG/view?usp=sharing";
-    const gDrv2 = "https://drive.google.com/file/d/1xPhqS8Dp3n2lTg5Wo6JczNBiyNWxvADo/view?usp=sharing";
-    const gDrv3 = "https://drive.google.com/file/d/15wYolPrd3Dbeum9AJj3EsssALqUjeLSN/view?usp=sharing";
-    // const gDrv3 = "https://drive.google.com/file/d/1eo_y6OpA5ovOmRw9L26PoDCA4Il3nA1D/view?usp=sharing";
-    const gDrv4 = "https://drive.google.com/file/d/11X4SeC0b0Juzq4bm-Eqra18GnuZxUeQj/view?usp=sharing";
+    const gDrv1 = "https://drive.google.com/file/d/1HydMTJfkFA7h7BMkXFdbR3XRjxvjDeDE/view?usp=drive_link";
+    const gDrv2 = "https://drive.google.com/file/d/1xIpSGuRabwq5XniDGVBQcHhZbSTYNZ_M/view?usp=drive_link";
+    const gDrv3 = "https://drive.google.com/file/d/1h-JfJ39VSU5vsmQ5LpskxPfO27COnckD/view?usp=drive_link";
+    
+    const gDrv4 = "https://drive.google.com/file/d/1eAnAm2maW3AEmWFa8g1DhxgJW4pLytQW/view?usp=drive_link";
+    // const gDrv1 = "https://drive.google.com/file/d/1xc4upf6KheKfludPmsZlC8oFEHOgO1lG/view?usp=sharing";
+    // const gDrv2 = "https://drive.google.com/file/d/1xPhqS8Dp3n2lTg5Wo6JczNBiyNWxvADo/view?usp=sharing";
+    // const gDrv3 = "https://drive.google.com/file/d/15wYolPrd3Dbeum9AJj3EsssALqUjeLSN/view?usp=sharing";
+    // // const gDrv3 = "https://drive.google.com/file/d/1eo_y6OpA5ovOmRw9L26PoDCA4Il3nA1D/view?usp=sharing";
+    // const gDrv4 = "https://drive.google.com/file/d/11X4SeC0b0Juzq4bm-Eqra18GnuZxUeQj/view?usp=sharing";
 
     const settings = {
         1: gDrv1,
@@ -804,9 +809,14 @@ sock.on('displayAirDrop', data => {
         3: gDrv3,
         4: gDrv4
     }
-    const teams = {
+    const teamsWithoutRandom = {
         1: data.redCratesFound,
         2: data.blueCratesFound
+    }
+
+    const teams = {
+        1: data.redRandCrate,
+        2: data.blueRandCrate
     }
     
     // console.log(teams[data.data]);
@@ -816,6 +826,7 @@ sock.on('displayAirDrop', data => {
     if (settings[teams[data.data]] == undefined) {return};
     
     // console.log(`Did not exit`);
+    // alert (teams[data.data]);
     window.open(settings[teams[data.data]], "_blank");
 
 });
@@ -826,7 +837,7 @@ sock.on('swapTCRMap', data => {
 });
 
 sock.on('fixBGClient', () => {
-    alert("test");
+    alert("Fixing BG");
     const body = document.getElementsByTagName('body')[0];
     body.style.backgroundImage = 'url("backupBG.jpg")';
 });

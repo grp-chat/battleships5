@@ -108,6 +108,22 @@ class MainSystem {
         this.secretMode = false;
 
         this.gameStarted = false;
+
+        this.randomRed = [];
+        this.randomBlue = [];
+
+        while(this.randomBlue.length < 4) {
+            var r = Math.floor(Math.random() * 4) + 1;
+            if (this.randomBlue.indexOf(r) === -1) this.randomBlue.push(r)
+        }
+        while(this.randomRed.length < 4) {
+            var r = Math.floor(Math.random() * 4) + 1;
+            if (this.randomRed.indexOf(r) === -1) this.randomRed.push(r)
+        }
+
+        console.log(this.randomRed)
+        console.log (this.randomBlue)
+        
     }
 
     getPlayerObject(playerId) {
@@ -500,12 +516,15 @@ io.sockets.on('connection', function (sock) {
 
     sock.on('displayAirDrop', data => {
         
-        const [ redCratesCount, redCratesFound ] = [mainSystem.allCrates["red"].length, mainSystem.cratesFound["red"].length];
-        const [ blueCratesCount, blueCratesFound ] = [mainSystem.allCrates["blue"].length, mainSystem.cratesFound["blue"].length];
         
+        const [ redCratesCount, redCratesFound ] = [mainSystem.allCrates["red"].length, mainSystem.cratesFound["red"].length];
+        const [ blueCratesCount, blueCratesFound ] = [mainSystem.allCrates["blue"].length, mainSystem.cratesFound["blue"].length];        
+        const redRandCrate = mainSystem.randomRed[redCratesFound -1];
+        const blueRandCrate = mainSystem.randomBlue[blueCratesFound -1];
+
         io.emit('chat-to-clients', `Red Crates Found: ${redCratesFound}`);
         io.emit('chat-to-clients', `Blue Crates Found: ${blueCratesFound}`);
-        io.emit('displayAirDrop', { redCratesFound, blueCratesFound, data});
+        io.emit('displayAirDrop', { redCratesFound, blueCratesFound, redRandCrate, blueRandCrate, data});
     });
 
     sock.on('addChance', data => {
