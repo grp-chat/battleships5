@@ -113,11 +113,11 @@ class MainSystem {
         this.randomBlue = [];
 
         while(this.randomBlue.length < 4) {
-            var r = Math.floor(Math.random() * 4) + 1;
+            var r = Math.floor(Math.random() * 5) + 1;
             if (this.randomBlue.indexOf(r) === -1) this.randomBlue.push(r)
         }
         while(this.randomRed.length < 4) {
-            var r = Math.floor(Math.random() * 4) + 1;
+            var r = Math.floor(Math.random() * 5) + 1;
             if (this.randomRed.indexOf(r) === -1) this.randomRed.push(r)
         }
 
@@ -429,6 +429,9 @@ io.sockets.on('connection', function (sock) {
     });
     sock.on('fixBG', () => {
         io.emit('fixBGClient');
+    });
+    sock.on('getLink', () => {
+        io.emit('chat-to-clients', `https://lh3.googleusercontent.com/pw/AP1GczPdivmQ54fYNV7yvRRBHhZw2IONtHLmMIk10ANIGvDFfUU45j44_hk-KykTBSVdux4FD5rrAztSnGODVyD8npkkoR3F1XpNOX_nG9ztj4MY5B58Nx4=w2400`);
     });
     sock.on('setGameStart', () => {
         mainSystem.gameStarted = true;

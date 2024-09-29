@@ -27,6 +27,8 @@ class fixedCommand {
             return;
         }
 
+        
+
         sock.emit(this.sockEmitFlag);
 
         
@@ -265,6 +267,7 @@ const allCommands = [
     new fixedCommand("TCR: set to game start", 'setGameStart'),
     
     new fixedCommand("TCR: fix BG", 'fixBG'),
+    new fixedCommand("TCR: get link", 'getLink'),
     new fixedCommand("TCR: restore data", 'restoreData'),
     new fixedCommand("TCR: reveal all ships", 'revealAll'),
     new fixedFreeCommand(nickname + ": deploy", 'deployShip'),
