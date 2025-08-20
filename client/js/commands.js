@@ -15,6 +15,7 @@ class fixedCommand {
             return;
         }
         if (this.sockEmitFlag === 'launch') {
+            if (nickname != "TCR") return;
             sock.emit(this.sockEmitFlag, nickname);
             return;
         }
@@ -23,6 +24,12 @@ class fixedCommand {
             return;
         }
         if (this.sockEmitFlag === 'restoreData') {
+            sock.emit(this.sockEmitFlag, nickname);
+            return;
+        }
+
+        if (this.sockEmitFlag === 'setGameStart') {
+            if (nickname != "TCR") return;
             sock.emit(this.sockEmitFlag, nickname);
             return;
         }
@@ -264,6 +271,8 @@ const allCommands = [
     new fixedCommand("TCR: off secret mode", 'offSecretMode'),
     new fixedCommand("TCR: result", 'updateTargetMap'),
     new fixedCommand("TCR: launch missile", 'launch'),
+    new fixedCommand("PA: launch missile", 'launch'),
+    new fixedCommand("PB: launch missile", 'launch'),
     new fixedCommand("TCR: set to game start", 'setGameStart'),
     
     new fixedCommand("TCR: fix BG", 'fixBG'),

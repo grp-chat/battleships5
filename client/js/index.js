@@ -12,8 +12,8 @@ const promptMsg = () => {
         teacher: { pinNumber: '8', nickname: 'TCR' },
         len: { pinNumber: '1502', nickname: 'LEN' },
 
-        sat2pmStudent1: { pinNumber: '9852', nickname: 'LK' },
-        sat2pmStudent2: { pinNumber: '9035', nickname: 'LXR' },
+        sat2pmStudent1: { pinNumber: '1', nickname: 'PA' },
+        sat2pmStudent2: { pinNumber: '2', nickname: 'PB' },
         sat2pmStudent3: { pinNumber: '3839', nickname: 'SZF' },
         sat2pmStudent4: { pinNumber: '3583', nickname: 'JHA' },
         sat2pmStudent5: { pinNumber: '1072', nickname: 'JL' },
@@ -324,8 +324,20 @@ function clickableGrid(rows, cols, team, callback) {
 }
 
 function checkIfThisUserCanClick(id) {
-    if (["TCR", whosTurn].indexOf(id) === -1) return false;
+    if (["TCR", "PA", "PB", whosTurn].indexOf(id) === -1) return false;
     return true;
+}
+function checkIfUserIsPAorPB(teamMap, turnsPlayerTeam) {
+
+    if (nickname === "TCR") return true;
+    if (teamMap === "red") {
+        if (nickname === "PB") return true;
+        if (nickname === "PA") return false;
+    } else {
+        if (nickname === "PB") return false;
+        if (nickname === "PA") return true;
+    }
+    
 }
 function checkifUserCanClickThisMap(teamMap, turnsPlayerTeam) {
     const settings = {
@@ -335,6 +347,7 @@ function checkifUserCanClickThisMap(teamMap, turnsPlayerTeam) {
 
     if (nickname === "TCR") return true;
     if(teamMap === settings[turnsPlayerTeam]) return false;
+    
     return true;
 }
 
@@ -356,7 +369,9 @@ function afterClickingTheGrid(el, row, col, i, teamMap) {
     // lastClicked = el;
 
     if (!checkIfThisUserCanClick(nickname)) return;
+    if (!checkIfUserIsPAorPB(teamMap, turnsPlayerTeam)) return;
     if (!checkifUserCanClickThisMap(teamMap, turnsPlayerTeam)) return;
+
     const cell = el.id
     sock.emit('clickedGrid', { cell, i, teamMap });
     

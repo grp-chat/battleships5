@@ -45,12 +45,12 @@ const getLockIdFromPassword = password => {
 
 class MainSystem {
     constructor() {
-        //this.extraArr = ["TCR", "LOK", "LK", "JHA", "JV", "CJH", "SZF", "JHA", "TJY", "KX"];
+        // this.extraArr = ["TCR", "LOK", "LK", "JHA", "JV", "CJH", "SZF", "JHA", "TJY", "KX"];
         //this.studentIdArr = ["TCR", "JX", "JZ", "TWN", "LJY", "ELI", "CUR", "LSH", "CT", "LK", "JV"];
         //this.extraArr = ["TCR", "CUR", "CT", "ELI", "JZ", "LJY", "TWN", "RYD", "JX", "LK", "JV"];
         // this.extraArr = ["TCR", "LOK", "JHA", "KN", "JT", "CJH", "CED", "KX", "TJY", "LSH", "SZF"];
         // this.studentIdArr = ["TCR", "LOK", "JHA", "KN", "JT", "CJH", "CED", "KX", "TJY", "RYD", "SZF"];
-        this.studentIdArr = ["TCR", "CKH", "LL", "JUN", "JOE", "JON", "LXA", "KX", "TJY", "RYD", "SZF"];
+        this.studentIdArr = ["TCR", "PA", "PB", "LOK", "KN", "JON", "LXA", "KX", "TJY", "RYD", "SZF"];
 
         this.playersArr = [
             this.p1 = new Player({ id: this.studentIdArr[0], deployChance:100 }),
