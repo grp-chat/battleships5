@@ -270,9 +270,9 @@ const allCommands = [
     new fixedCommand("TCR: secret mode", 'secretMode'),
     new fixedCommand("TCR: off secret mode", 'offSecretMode'),
     new fixedCommand("TCR: result", 'updateTargetMap'),
-    // new fixedCommand("TCR: launch missile", 'launch'),
+    new fixedCommand("TCR: launch missile", 'launch'),
     // new fixedCommand("PA: launch missile", 'launch'),
-    new fixedCommand("PB: launch missile", 'launch'),
+    // new fixedCommand("PB: launch missile", 'launch'),
     new fixedCommand("TCR: set to game start", 'setGameStart'),
     
     new fixedCommand("TCR: fix BG", 'fixBG'),
