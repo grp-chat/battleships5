@@ -8,6 +8,18 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
+// 1. YOUR EXISTING TOP CODE (requires, middleware, static folder setup)
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public')); // Or whatever your static folder is named
+
+// ==========================================
+// 2. ADD YOUR /HELP ROUTE HERE
+// ==========================================
+app.get('/help', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'help.html'));
+});
+
 const clientPath = `${__dirname}/client`;
 console.log(`Serving static files from path ${clientPath}`);
 

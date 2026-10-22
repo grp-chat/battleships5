@@ -721,7 +721,7 @@ sock.on('pushLocationsToTCR', data => {
     // console.log(studentsArr);
     if (data.shipsLocations[targetMap].includes(targetCoord)) {
         // gDrv1 = "https://drive.google.com/file/d/1kL-6P-VordZC9O8upAx9hW_yPbXe9_BY/view?usp=sharing";
-        gDrv1 = "https://drive.google.com/file/d/1HiB6sgspap8lniCqNUkzecD3LaAA_8HF/view?usp=sharing";
+        gDrv1 = "https://coach-andrew-battleships.netlify.app/1kl-6p-vordzc988upax9hw_ypbxe9_by.mp4";
         window.open(gDrv1, "_blank");
 
         // const videoDiv = document.querySelector('.video2');
@@ -745,7 +745,7 @@ sock.on('pushLocationsToTCR', data => {
         //console.log("Hit")
     }else if (data.allCrates[targetMap].includes(targetCoord)) {
         // gDrv1 = "https://drive.google.com/file/d/1XyLIyCJ7eVu9cWAv2n2Eae-tTOroAsr6/view?usp=sharing";
-        gDrv1 = "https://drive.google.com/file/d/1ukl6RwbxsTOPV6CWb2qYGOgDVk-HzR0l/view?usp=sharing";
+        gDrv1 = "https://coach-andrew-battleships.netlify.app/1kl-6p-vordzc908upax9hw_ypbxe9_by.mp4";
         window.open(gDrv1, "_blank");
 
         // const videoDiv = document.querySelector('.video3');
@@ -770,7 +770,7 @@ sock.on('pushLocationsToTCR', data => {
     } else {
         // gDrv2 = "https://drive.google.com/file/d/15KRceSBG9Z-uTgGvDym33TsKoBlIJ1TO/view?usp=sharing"
         // gDrv2 = "https://drive.google.com/file/d/1iFgTNGjZqElB5vY8Ji-eB0PZOHu8m_eT/view?usp=sharing"
-        gDrv2 = "https://drive.google.com/file/d/1ruywp3Hkr7l_XjPKKS_4llQlRc3HFRhM/view?usp=sharing"
+        gDrv2 = "https://coach-andrew-battleships.netlify.app/1kl-6p-vordzc9B8upax9hw_ypbxe9_by.mp4"
         window.open(gDrv2, "_blank");
 
         const videoDiv = document.querySelector('.video');
