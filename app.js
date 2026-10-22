@@ -1,7 +1,7 @@
 const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
-const { join } = require('path');
+const path = require('path');
 const { json } = require('express');
 const fs = require('fs');
 const PORT = process.env.PORT || 3000;
@@ -17,7 +17,11 @@ app.use(express.static('public')); // Or whatever your static folder is named
 // 2. ADD YOUR /HELP ROUTE HERE
 // ==========================================
 app.get('/help', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'help.html'));
+    res.sendFile(path.join(__dirname, 'client', 'help.html'));
+});
+
+app.get('/history', (req, res) => {
+    res.sendFile(path.join(__dirname, 'history.txt'));
 });
 
 const clientPath = `${__dirname}/client`;
